@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>BLOG APP</title>
+    </head>
+
+    <body>
+        <h1>WELCOME TO MY BLOG APP</h1>
+        {% for post in posts%}
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.body }} | {{ post.author }}</p>
+            ------------------------------------------
+        {% endfor %}
+    </body>
+</html>
