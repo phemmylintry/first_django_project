@@ -1,10 +1,10 @@
 from django.urls import path
 from rest_framework.routers import DefaultRouter
-from .views import PostViewSet
+from .views import PostViewset
 
 router = DefaultRouter()
-router.register(r'posts', PostViewSet, basename='posts')
+router.register(r'posts', PostViewset, basename='posts')
 
-urlpatterns = [] + router.urls
-
-# 127.0.0.1:8007/posts
+urlpatterns = [
+    path('', PostViewset.as_view({'get': 'get_posts', 'post':'create_post'}), name='posts'),
+] + router.urls
