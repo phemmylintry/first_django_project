@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Attendess</title>
+    </head>
+
+    <body>
+
+        <h2>List of Attendees</h2>
+
+        <ul>
+            {% for attendee in attendees %}
+                <li>{{ attendee.first_name }} - {{ attendee.last_name }}</li>
+            {% endfor %}
+
+        </ul>
+    </body>
+</html>
